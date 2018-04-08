@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <style>
+            * {
+                font-size: 1.05em;
+                transition: .5s ease all;
+                background-color: #1e1e1e;
+            }
+
+            pre {
+                color: #DCDCDC;
+            }
+
+            .string {
+                color: #CE9178;
+            }
+
+            .keyword {
+                color: #2C7CD6
+            }
+
+            .line-number {
+                color: #636363
+            }
+
+            .comment {
+                color: #659250
+            }
+
+            a {
+                text-decoration: none;
+                color: #CE9178;
+            }
+
+            a:hover {
+                color: #a1a1a1;
+            }
+        </style>
+        <title>Montaser Al-joubeh</title>
+    </head>
+    <body>
+        <pre>
+
+        <span class="line-number"> 1</span> <span class="keyword">var</span> <span id="varName" style="opacity: 1;">me</span> = {
+        <span class="line-number"> 2</span>     <span id="name" style="opacity: 1;">name</span>: <span class="string">'Montaser Al-joubeh'</span>,
+        <span class="line-number"> 3</span>     get <span id="age" style="opacity: 1;">age</span>() {
+        <span class="line-number"> 4</span>         <span class="comment">// <span id="comment" style="opacity: 1;">That's</span> <span id="years">19</span> <span id="joke" style="opacity: 1;">in non-programmer</span>:P</span>
+        <span class="line-number"> 5</span>         <span class="keyword">var</span> <span id="name">birthday</span> = <span class="keyword">new</span> Date(1998, 6, 14),
+        <span class="line-number"> 6</span>             diff = <span class="keyword">new</span> Date(Date.now() - birthday.getTime());
+        <span class="line-number"> 7</span>         <span class="keyword">return</span> Math.abs(diff.getUTCFullYear() - 1970);
+        <span class="line-number"> 8</span>     },
+        <span class="line-number"> 9</span>     <span id="mail">mail</span>: <span class="string"><a href="mailto:montaser268@gmail.com">'montaser268@gmail.com'</a></span>,
+        <span class="line-number">10</span>     <span id="profession" style="opacity: 1;">profession</span>: <span class="string">'<span id="jobTitle" style="opacity: 1;">software developer</span>'</span>,
+        <span class="line-number">11</span>     <span id="location" style="opacity: 1;">location</span>: <span class="string">'<span id="country" style="opacity: 1;">PS, Jericho</span>'</span>,
+        <span class="line-number">12</span>     skills: [<span class="string">'vb.net'</span>, <span class="string">'c#'</span>, <span class="string">'windowsForms'</span>, <span class="string">'asp.net mvc'</span>, <span class="string">'xamarin.forms'</span>],
+        <span class="line-number">13</span>     links: [<span class="string"><a target="_blank" href="https://www.facebook.com/MontaserT.Aljoubeh">'facebook'</a>, <a target="_blank" href="https://github.com/Montaser1998">'github'</a></span>]
+        <span class="line-number">14</span> }; 
+        </pre>
+        <script>
+            window.onload = function windowOnload() {
+
+                var birthday = new Date(1998, 6, 14),
+                    diff = new Date(Date.now() - birthday.getTime()),
+                    age = Math.abs(diff.getUTCFullYear() - 1970);
+
+                document.getElementById('years').innerHTML = age;
+
+                if (location.hash && location.hash != '') {
+                    onHashChange();
+                }
+            }
+        </script>
+    </body>
+</html>
